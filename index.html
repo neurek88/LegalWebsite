@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="example359" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Nick Eurek" />
+    <title>The Law Office of Dai-Klabunde</title>
+    <meta name="description" content="Add INFO!!!">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <!-- add styles -->
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+    <!-- add javascripts -->
+    <script src="js/jquery-2.0.3.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+</head>
+<body>
+    <header>
+        <div class="wrap">
+            <!-- logo -->
+            <a href="#!"><img class="logo" src="images/PDlogo3.jpg" /></a>
+
+            <!-- navigation menu -->
+            <nav>
+                <ul>
+                    <li><a id="workBtn" href="#!/" ng-class="{activeSmall:part == 'Home'}" >Home</a></li>
+                    <li><a id="policyBtn" href="#!/policy" ng-class="{activeSmall:part == 'policy'}">Pricing</a></li>
+                    <li><a id="aboutBtn" href="#!/about" ng-class="{activeSmall:part == 'about'}">About</a></li>
+                    <li><a id="contactBtn" href="#!/contact" ng-class="{activeSmall:part == 'contact'}">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- main content -->
+    <div style="position:relative">
+        <div style="width:100%" ng-view ng-animate="{enter: 'view-enter', leave: 'view-leave'}"></div>
+    </div>
+
+</body>
+</html>
